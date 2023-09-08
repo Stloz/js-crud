@@ -1,13 +1,57 @@
-{{! 
-Це код container файлу для index сторінки, 
+{{!
+Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- }}
-
-<div >
-  Hello world!
-</div>
-
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
 }}
+
+<main class="main">
+	<section>
+		<div class="form">
+			<h1 class="form__title">Створити користувача</h1>
+			<form method="POST" action="/user-create">
+				<div class="form__content">
+					<div class="form__field">
+						<label for="email" class="from__label">Email адреса:</label>
+						<input type="email" name="email" class="form__input">
+					</div>
+					<div class="form__field">
+						<label for="login" class="from__label">Логін:</label>
+						<input type="login" name="login" class="form__input">
+					</div>
+					<div class="form__field">
+						<label for="password" class="from__label">Пароль:</label>
+						<input type="password" name="password" class="form__input">
+					</div>
+					<button class="form__button">Створити</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<section>
+		<div class="form">
+			<h1 class="form__title">Список користувачів</h1>
+			<div class="user-list">
+				{{#with data.users}}
+				{{#if isEmpty}}
+				<mark>Пустий</mark>
+				{{else}}
+				<ul>
+					{{#each list}}
+					<li>{{email}} | {{login}} <a href="/user-delete?id={{id}}">(Видалити)</a></li>
+					{{/each}}
+				</ul>
+				{{/if}}
+				{{/with}}
+			</div>
+		</div>
+	</section>
+</main>
+
+
+
+{{!
+Цей код містить лише те, що буде виводитись в
+
+<body>
+	Адже наш layout/default.hbs має вже структуру HTML
+	}}
