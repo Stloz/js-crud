@@ -1,32 +1,31 @@
-{{! 
-  Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
-  І котрий обгортає код container файлів для будь-яких ендпоїнтів
+{{!
+Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
+І котрий обгортає код container файлів для будь-яких ендпоїнтів
 }}
 
 <html>
 
-  <head>
-    <title>
-      {{page.title}}
-    </title>
-    <meta charset='utf-8' />
-    <link href='css/normalize.css' rel='stylesheet' />
-    <link
-      href='dist/css/layout/default/style.css'
-      rel='stylesheet'
-    />
-    <link
-      href='dist/css/container/{{style}}/style.css'
-      rel='stylesheet'
-    />
+<head>
+	<title>
+		{{page.title}}
+	</title>
+	<meta charset='utf-8' />
+	<link href='css/normalize.css' rel='stylesheet' />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+		rel="stylesheet">
+	<link href='dist/css/layout/default/style.css' rel='stylesheet' />
+	<link href='dist/css/container/{{style}}/style.css' rel='stylesheet' />
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   }}
-    {{{body}}}
+	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу }}
+	{{{body}}}
 
-  </body>
+</body>
 
 </html>
