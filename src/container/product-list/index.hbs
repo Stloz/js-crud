@@ -1,37 +1,83 @@
-{{!
-Це код container файлу для index сторінки,
+{{! 
+Це код container файлу для index сторінки, 
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
 }}
+<main class='main'>
+  {{! <section>
+    <div class='form'>
+      <h1 class='form__title'>Створення товару</h1>
+      <form method='POST' action='/product-create'>
+        <div class='form__content'>
+          <h5>Інформація про товар</h5>
+          <div class='row'>
+            <div class='form__field'>
+              <label for='name' class='form__label'>Назва
+                товару:</label>
+              <input
+                type='text'
+                name='name'
+                class='form__input'
+              />
+            </div>
+            <div class='form__field'>
+              <label
+                for='price'
+                class='form__label'
+              >Ціна:</label>
+              <input
+                type='login'
+                name='price'
+                class='form__input'
+              />
+            </div>
+          </div>
+          <div class='form__field'>
+            <label
+              for='description'
+              class='form__label'
+            >Короткий опис товару:</label>
+            <input
+              type='text'
+              name='description'
+              id='description'
+              class='form__input'
+            />
+          </div>
+          <button class='form__button'>Створити товар</button>
+        </div>
+      </form>
+    </div>
+  </section> }}
 
-<main class="main">
-	<section>
-		<div class="list">
-			<h1 class="list__title">Спиcок товарів</h1>
-			<div class="product-list">
 
-				{{#with data.products}}
-				{{#if isEmpty}}
-				<mark>Немає товарів</mark>
-				{{else}}
+  <section>
+    <div class='form'>
+      <h1 class='form__title'>Список товарів:</h1>
+      <div class='product-list'>
+        {{#with data.products}}
+          {{#if isEmpty}}
+            <mark>Пустий </mark>
+          {{else}}
+            {{#each list}}
 
-				{{#each list}}
-
-				{{>product-card data=this}}
-
-				{{/each}}
-				{{/if}}
-				{{/with}}
-				<div class="box">
-					<a class="button click" href="/product-create">Створити новий</a>
-				</div>
-			</div>
-		</div>
-	</section>
+            {{> product-card}}
+              {{!-- <div class='card'>
+                <h4 class='card__title'> {{name}} </h4>
+                <div class='card__description'>{{description}}</div>
+                <div class='card__id'>ID: {{id}}</div>
+                <div class='row card__row'>
+                  <div class='price'>{{price}} ₴ </div>
+                  <div class='link'><a href='/product-edit?id={{id}}'>Редагувати</a></div>
+                </div>
+              </div> --}}
+            {{/each}}
+          {{/if}}
+        {{/with}}
+      </div>
+    </div>
+  </section>
 </main>
-
-{{!
-Цей код містить лише те, що буде виводитись в
-
-<body>
-	Адже наш layout/default.hbs має вже структуру HTML
-	}}
+{{! 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}

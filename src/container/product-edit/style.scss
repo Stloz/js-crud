@@ -1,138 +1,94 @@
-@use '../../lib/service.scss' as s; // підключаємо файл service.scss і він буде тут називатись s
-
-section {
-	display: flex;
-	justify-content: center;
-	padding: s.space(4);
-}
+@use '../../lib/service.scss' as s;
 
 .form {
-	max-width: 900px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	padding: s.space(4);
-	gap: s.space(8);
-	border: 1px solid s.color('light');
-	border-radius: s.radius(2);
+  display: flex;
+  flex-direction: column;
+  padding: s.space(4);
+  gap: s.space(8);
+  margin: s.space(4) auto;
+  width: 90%;
 
-	&__title {
-		font-size: 20px;
-		font-weight: bold;
-		padding-bottom: s.space(1);
-	}
+  &__title {
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: s.space(1);
+    color: s.color(primary);
+    //margin-bottom: s.space(2);
+    //border-bottom: 1px solid s.color('light');
+  }
 
-	&__content {
-		display: grid;
-		grid-template-rows: repeat(3, 1fr);
-		row-gap: s.space(6);
-		column-gap: s.space(2);
-	}
+  &__content {
+    display: grid;
+    gap: s.space(6);
+    border: 1px solid s.color(light);
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: s.space(4);
+  }
 
-	&__row3 {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: s.space(2);
 
-	}
+  .row2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: s.space(4)
+  }
+  .row3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: s.space(4)
+  }
 
-	&__row1 {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: s.space(2);
+  }
 
-	&__row2 {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: s.space(2);
-	}
+  #description {
+    height: 80px;
+  }
 
-	&__field {
-		display: flex;
-		flex-direction: column;
-		gap: s.space(2);
+  &__label {
+    font-size: 14px;
+  }
 
-	}
+  &__input {
+    border: 1px solid s.color('light');
+    padding: s.space(2);
+  }
 
-	&__label {
-		font-size: 14px;
-	}
+  &__button {
+    border: 1px solid s.color('light');
+    padding: s.space(2);
+    border-radius: 5px;
+    background-color: s.color(primary);
+    color: white;
+  }
+  .delete_button {
+    //display: inline-block;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: auto 0;
+  }
 
-	&__label--gray {
-		color: rgba(0, 0, 0, 0.3);
-	}
-
-	&__input {
-		border: 1px solid s.color('light');
-		border-radius: s.radius(1);
-		padding: s.space(2)
-	}
-
-	&__button {
-		border: 1px solid s.color('light');
-		margin: s.space(4) s.space(1) s.space(4) s.space(1);
-		border-radius: s.radius(1);
-		background-color: s.color('primary');
-		color: s.color('text_white');
-	}
-
-	&__button--red {
-		background-color: red;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-decoration: none;
-	}
-
-	&__box {
-		max-width: 100%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		justify-content: space-between;
-		gap: s.space(4);
-	}
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(10);
 }
 
-.form:hover {
-	box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+input {
+  border-radius: 5px;
 }
 
-.click {
-	transition: 0, 7s;
-}
-
-.click:hover {
-	opacity: 0.7;
-	cursor: pointer;
-}
-
-.main {
-	display: flex;
-	flex-direction: column;
-	gap: s.space(10)
-}
-
-.box {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: s.space(4)
-}
-
-.button {
-	max-width: fit-content;
-	width: 100%;
-	height: 35px;
-	border: 1px solid s.color('light');
-	padding: s.space(2);
-	border-radius: s.radius(1);
-	background-color: s.color('primary');
-	color: s.color('text_white');
-	text-decoration: none;
-
-	&--outline {
-		background-color: s.color('text_white');
-		color: black;
-		border: 2px solid s.color('primary');
-	}
+.user-list {
+  li {
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }

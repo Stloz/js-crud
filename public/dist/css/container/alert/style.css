@@ -1,0 +1,39 @@
+.content {
+  display: grid;
+  gap: 24px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 16px;
+  margin: 32px auto;
+  width: 90%;
+}
+.content .row {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 8px;
+}
+.content .info {
+  align-self: center;
+  text-align: left;
+  gap: 8px;
+}
+.content .info h4 {
+  font-size: larger;
+  margin-bottom: 12px;
+}
+.content .button {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(0, 119, 255);
+  color: white;
+  text-align: center;
+  margin: auto 0;
+  padding: 8px 48px;
+}
+
+/*# sourceMappingURL=style.css.map */

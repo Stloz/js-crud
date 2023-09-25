@@ -1,0 +1,48 @@
+@use '../../lib/service.scss' as s;
+
+.content {
+  display: grid;
+  gap: s.space(6);
+  border: 1px solid s.color(light);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: s.space(4);
+  margin: s.space(8) auto;
+  width: 90%;
+  
+
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    //grid-template-columns: 1fr 1fr;
+    grid-gap: s.space(2)
+  }
+
+  .info {
+    align-self: center;
+    text-align: left;
+    gap: 8px;
+    
+    h4 {
+      font-size: larger;
+      margin-bottom: s.space(3);
+    }
+  }
+  
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid s.color('light');
+    padding: s.space(2);
+    border-radius: 5px;
+    background-color: s.color(primary);
+    color: white;
+    text-align: center;
+    margin: auto 0;
+    padding: s.space(2) s.space(12);
+
+  }
+}
