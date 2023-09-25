@@ -1,0 +1,155 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading__title {
+  font-size: 24px;
+  color: #000;
+}
+
+.heading_info {
+  font-size: 16px;
+  color: #000;
+}
+
+.product-card {
+  border-radius: 10px;
+  border: 1px solid #dddddd;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.product-card__image {
+  max-height: 300px;
+  width: 100%;
+}
+
+.product-card__title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-card__subtitle {
+  font-size: 16px;
+}
+
+.product-card__category {
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  border: 1px solid transparent;
+}
+
+.product-card__category--1 {
+  border-color: blue;
+  color: blue;
+}
+
+.product-card__category--2 {
+  border-color: green;
+  color: green;
+}
+
+.product-card__button {
+  background-color: rgb(0, 119, 255);
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.product-card__button:hover {
+  opacity: 0.7;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.field__label {
+  font-size: 14px;
+}
+
+.field__input {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.field--disabled {
+  position: absolute;
+  display: none;
+}
+
+.button {
+  background-color: rgb(0, 119, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.button:hover {
+  opacity: 0.7;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+}
+
+.form-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+}
+
+.cart {
+  display: grid;
+  gap: 8px;
+}
+
+.card__line {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart {
+  display: grid;
+  gap: 8px;
+}
+
+.hr {
+  color: #999999;
+  margin-bottom: 8px;
+}
+
+.heading__title {
+  color: rgb(0, 119, 255);
+}
+
+/*# sourceMappingURL=style.css.map */

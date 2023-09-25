@@ -1,13 +1,9 @@
-{{#with data}}
-<div class="card">
-	<h2 class="card__title">{{name}}</h2>
-	<p class="card__description">{{description}}</p>
-
-	<p class="card__id">{{id}}</p>
-
-	<div class="card__box">
-		<span class="card__price">{{price}}₴</span>
-		<a class="card__upd" href="/product-edit?id={{id}}">Редагувати</a>
+<div class='card'>
+	<h4 class='card__title'> {{name}} </h4>
+	<div class='card__description'>{{description}}</div>
+	<div class='card__id'>ID: {{id}}</div>
+	<div class='row card__row'>
+		<div class='price'>{{price}} ₴ </div>
+		<div class='link'><a href='/product-edit?id={{id}}'>Редагувати</a></div>
 	</div>
 </div>
-{{/with}}

@@ -1,0 +1,60 @@
+@use '../../lib/service.scss' as s;
+
+
+.product-card {
+	border-radius: 10px;
+	border: 1px solid s.color(border);
+	padding: s.space(4);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: s.space(3);
+}
+
+.product-card__image {
+	max-height: 300px;
+	width: 100%;
+}
+
+.product-card__title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.product-card__subtitle {
+	font-size: 16px;
+	color: s.color(gray);
+}
+
+.product-card__category {
+	padding: 5px 10px;
+	border-radius: 30px;
+	font-size: 14px;
+	color: s.color(dark);
+	border: 1px solid transparent;
+}
+
+.product-card__category--1 {
+	border-color: blue;
+	color: blue;
+}
+
+.product-card__category--2 {
+	border-color: green;
+	color: green;
+}
+
+.product-card__button {
+	background-color: s.color(primary);
+	color: white;
+	border: 0;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+
+	&:hover {
+		opacity: 0.7
+	}
+}

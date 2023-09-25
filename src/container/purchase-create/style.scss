@@ -1,0 +1,33 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purcaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(10);
+  padding: s.space(10);
+}
+
+.form-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: s.space(5);
+  padding: s.space(5);
+  border: 1px solid s.color(border);
+  border-radius: 10px;
+
+}
+
+.cart {
+  display: grid;
+  gap: s.space(2);
+}
+
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+}

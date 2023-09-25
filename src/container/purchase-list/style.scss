@@ -1,0 +1,56 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/heading/style.scss' as heading;
+@use '../../component/purchase-product/style.scss' as purcaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(10);
+  padding: s.space(10);
+  font-size: 14px;
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(2);
+  border: 1px solid s.color(border);
+  border-radius: 10px;
+  padding: 10px
+
+}
+
+.order {
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr 2fr;
+  gap: s.space(5);
+  padding: s.space(5);
+  border: 1px solid s.color(border);
+  border-radius: 10px;
+}
+
+.order-id {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+.order-item {
+  display: flex;
+  flex-direction: column;
+  gap: s.space(2);
+}
+.hr {
+  color: s.color(middle-dark);
+}
+
+.heading__title {
+  color: s.color(primary);
+  padding: s.space(4) 0;
+}
+
+.order-link {
+  color: black;
+  text-decoration: none;
+}

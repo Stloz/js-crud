@@ -1,0 +1,126 @@
+@use '../../lib/service.scss' as s;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: s.space(4);
+	gap: s.space(8);
+
+	&__title {
+		font-size: 28px;
+		font-weight: bold;
+		padding-bottom: s.space(1);
+		color: s.color(primary);
+		//margin-bottom: s.space(2);
+		//border-bottom: 1px solid s.color('light');
+	}
+
+	&__content {
+		display: grid;
+		gap: s.space(6);
+		border: 1px solid s.color(light);
+		border-radius: 10px;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		padding: s.space(4);
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: s.space(4)
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		gap: s.space(2);
+	}
+
+	#description {
+		height: 80px;
+	}
+
+	&__label {
+		font-size: 14px;
+	}
+
+	&__input {
+		border: 1px solid s.color('light');
+		padding: s.space(2);
+	}
+
+	&__button {
+		border: 1px solid s.color('light');
+		padding: s.space(2);
+		border-radius: 5px;
+		background-color: s.color(primary);
+		color: white;
+	}
+
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: s.space(10);
+}
+
+input {
+	border-radius: 5px;
+}
+
+.product-list {
+	display: flex;
+	gap: s.space(4);
+
+	.card {
+		height: 180px;
+		width: 280px;
+		border: 1px solid s.color(light);
+		border-radius: 10px;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+		overflow: hidden;
+		background: #d2eaffcb;
+		padding: s.space(4);
+		display: flex;
+		flex-direction: column;
+		gap: s.space(4);
+
+		&__title {
+			font-size: larger;
+			padding-bottom: s.space(1);
+		}
+
+		&__description {
+			padding-bottom: s.space(1);
+		}
+
+
+		&__id {
+			color: s.color(light);
+		}
+
+		.price {
+			font-size: 1.2rem;
+		}
+
+		.link {
+			color: s.color(primary);
+		}
+
+		&__row {
+			justify-content: space-between;
+		}
+	}
+
+
+
+
+	li {
+		padding-right: 15px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+
+	}
+}

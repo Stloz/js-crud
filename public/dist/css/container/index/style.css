@@ -5,11 +5,10 @@
   gap: 32px;
 }
 .form__title {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   border-bottom: 1px solid #ddd;
-  color: rgb(14, 92, 0);
 }
 .form__content {
   display: grid;
@@ -39,7 +38,7 @@ main {
   gap: 40px;
 }
 
-.user-list {
+.user-list li {
   padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
