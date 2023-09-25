@@ -1,0 +1,17 @@
+/* Error: There is no module with the namespace "s".
+ *   ,
+ * 2 |     padding: s.space(3) 0;
+ *   |              ^^^^^^^^^^
+ *   '
+ *   src/component/playlist-card/style.scss 2:11  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "s".\a   \2577 \a 2 \2502      padding: s.space(3) 0;\a   \2502               ^^^^^^^^^^\a   \2575 \a   src/component/playlist-card/style.scss 2:11  root stylesheet';
+}

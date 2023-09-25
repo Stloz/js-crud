@@ -3,6 +3,11 @@ $colorMap: (
 	title:rgb(14, 92, 0),
 	primary: rgb(48, 112, 239),
 	text_white: white,
+	border: #ced4da,
+	light-dark: #b3b3b3,
+	middle-dark: #999999,
+	gray: #BDBDBD,
+	dark: black,
 );
 
 @function color($key) {
